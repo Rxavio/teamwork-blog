@@ -28,11 +28,14 @@
 
 
     <ul class="nav-links">
+      {% if user.is_authenticated %}
       <li> <a href="#">New Article</a></li>
        <li> <a href="#">Profile</a></li>
       <li><a href="#">Logout</a><li>
-        <li> <a href="{% url 'register' %}">Register</a></li>
-       <!--<li> <a href="#">Login</a></li> -->
+        {% else %}
+      <li> <a href="{% url 'register' %}">Register</a></li>
+      <li> <a href="{% url 'login' %}">Login</a></li>
+      {% endif %}
     </ul>
   </nav>
 
