@@ -1,0 +1,124 @@
+ {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TEAMWORK</title> 
+    <link href='https://fonts.googleapis.com/css?family=Crimson Text' rel='stylesheet'>
+    <link rel="icon" type="image/png" href="{% static 'images/favicon.png' %}">    
+	 <link rel="stylesheet" type="text/css" href="{% static 'workdjango/nav.css' %}">
+     <link rel="stylesheet" type="text/css" href="{% static 'workdjango/view-articles.css' %}"> 
+     <link rel="stylesheet" type="text/css" href="{% static 'workdjango/pagination.css' %}">  
+	 <link rel="stylesheet" type="text/css" href="{% static 'workdjango/footer.css' %}">  
+</head>
+<body>
+  <nav>
+    <div class="hamburger">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+
+    <div class="logo">
+      <a href="#"> <img src="{% static 'images/team.png' %}"></a>
+        </div>
+
+
+    <ul class="nav-links">
+      <li> <a href="#">New Article</a></li>
+       <li> <a href="#">Profile</a></li>
+      <li><a href="#">Logout</a><li>
+       <!-- <li> <a href="#">Register</a></li>
+       <li> <a href="#">Login</a></li> -->
+    </ul>
+  </nav>
+
+   <!--container part-->   
+
+  {% block content %}
+   {% endblock %}
+
+
+   <!--footer-->   
+   <footer class="mainfooter">
+
+    <div class="left">
+    <div>
+       <img src="{% static 'images/street-view-solid.svg' %}">
+     </div>
+      <div>
+      <h3>FIND ME AT</h3>
+      </div>
+
+      <div>
+               <p>Kigali / Rwanda</p>
+      </div>
+
+      <div>
+       <p> KN 9 Ave</p>
+              </div>
+
+              <div>
+       <p>KN 275 st</p>
+      </div>
+              
+    </div>
+
+    <div class="center">
+              <div>
+              <img src="{% static 'images/phone-alt-solid.svg' %}">
+              </div>
+
+      <div>
+       <h3>CALL ME AT</h3>
+      </div>
+
+      <div>
+          <p>+250785209432</p>
+      </div>
+
+      <div>
+       <p>+250728837845</p>
+              </div>
+
+    </div>
+
+    <div class="right">
+                  <div class="msg">
+                  <img src="{% static 'images/envelope-regular.svg' %}">
+                  </div>
+          <div>
+          <h3>EMAIL ME AT</h3>
+          </div>
+
+        <div>
+        <p>rucahoxavi@gmail.com</p>                
+        </div>
+              <p class="icon">
+                  <div>
+                 <a href="https://github.com/Rxavio"> <img src="{% static 'images/github-brands.svg' %}"></a>
+                  
+                 <a href="https://gitlab.com/"> <img src="{% static 'images/gitlab-brands.svg' %}"></a>
+                  
+                  <a href="https://twitter.com/"><img src="{% static 'images/twitter-brands.svg' %}"></a>
+
+                  <a href="#"><img src="{% static 'images/linkedin-in-brands.svg' %}"></a>
+                  </div>
+              </p>
+          </div>  
+      </footer>
+
+      <!-- Footer-->
+  <section class="footer">
+      
+       &copy;Django designed by<span> Xavier </span> All Rights Reserved.
+  </section>
+    
+              
+<script src="{% static 'js/script.js' %}"></script> 
+</body>
+</html>
+
+         
