@@ -1,1 +1,1 @@
-# teamwork-blog
+# teamwork-django
