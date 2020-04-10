@@ -1,0 +1,13 @@
+{% extends "workdjango/base.html" %}
+{% block content %}
+<div class="create-article-page">
+    <div class="article-form"> 
+        <form method="POST">
+            {% csrf_token %}
+                <h2>Are you sure you want to delete the Article "{{ object.title }}"</h2>
+                <button type="submit">Yes, Delete</button>
+                <a href="{% url 'post-detail' object.id %}">Cancel</a>
+            </div>
+        </form>
+    </div>
+{% endblock content %}

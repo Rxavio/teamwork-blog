@@ -9,6 +9,7 @@
 <h4>{{ post.title }}</h4>
 <div>
   <a href="{% url 'post-update' object.id %}">Update</a>
+  <a href="{% url 'post-delete' object.id %}">Delete</a>
  
 </div>
 <p> {{ post.content }}</p> 
