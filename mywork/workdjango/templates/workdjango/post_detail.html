@@ -16,7 +16,8 @@
 </div>
 <p> {{ post.content }}</p> 
 <div class="more">
-<h5 class="author">Written By {{ post.author }} <i class="date">{{ post.date_posted|date:"F d, Y" }}</i></h5>
+<h5 class="author">Written By <a href="{% url 'user-posts' post.author.username %}">{{ post.author }} </a>
+   <i class="date">{{ post.date_posted|date:"F d, Y" }}</i></h5>
 </div>      
 </div>
 

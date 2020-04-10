@@ -5,7 +5,7 @@
     <div class="article-form"> 
       <form method="POST" autocomplete="on">
         {% csrf_token %}
-     <h3>Create a Post</h3><br>
+     <h3>Add New Article</h3><br>
       {{ form|crispy }}
    <button type="submit">Save</button>
    </form>

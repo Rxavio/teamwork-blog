@@ -1,8 +1,8 @@
- {% extends "workdjango/base.html" %}
+{% extends "workdjango/base.html" %}
 {% block content %}
 <div class="shared-article-page">
   <div class="shared-form">
-   <h3>Shared Articles</h3> 
+   <h3>All Articles by {{ view.kwargs.username }} ({{ page_obj.paginator.count }})</h3> 
 
  {% for post in posts %}       
 <div class="info-card">
