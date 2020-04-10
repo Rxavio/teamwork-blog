@@ -13,6 +13,7 @@ class PostListView(ListView):
     template_name = 'workdjango/home.html' 
     context_object_name = 'posts'
     ordering = ['-date_posted']
+    paginate_by = 5
 
 class PostCreateView(LoginRequiredMixin, CreateView):
     model = Post
