@@ -3,6 +3,8 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic import (
     ListView,
     CreateView,
+    DetailView,
+   
 )
 from .models import Post
 
@@ -21,4 +23,5 @@ class PostCreateView(LoginRequiredMixin, CreateView):
         form.instance.author = self.request.user
         return super().form_valid(form) 
 
-    
+class PostDetailView(DetailView):
+    model = Post     
