@@ -1,0 +1,14 @@
+{% extends "workdjango/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="create-article-page">
+    <div class="article-form"> 
+      <form method="POST" autocomplete="on">
+        {% csrf_token %}
+     <h3>Create a Post</h3><br>
+      {{ form|crispy }}
+   <button type="submit">Save</button>
+   </form>
+  </div>
+   </div>
+{% endblock content %}
