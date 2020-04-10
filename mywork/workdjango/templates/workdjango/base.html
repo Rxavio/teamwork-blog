@@ -12,7 +12,8 @@
      <link rel="stylesheet" type="text/css" href="{% static 'workdjango/view-articles.css' %}"> 
      <link rel="stylesheet" type="text/css" href="{% static 'workdjango/create.css' %}"> 
      <link rel="stylesheet" type="text/css" href="{% static 'workdjango/write-article.css' %}"> 
-     <link rel="stylesheet" type="text/css" href="{% static 'workdjango/pagination.css' %}">  
+     <link rel="stylesheet" type="text/css" href="{% static 'workdjango/pagination.css' %}">
+     <link rel="stylesheet" type="text/css" href="{% static 'workdjango/response.css' %}">  
 	 <link rel="stylesheet" type="text/css" href="{% static 'workdjango/footer.css' %}">  
 </head>
 <body>
@@ -41,6 +42,14 @@
   </nav>
 
    <!--container part-->   
+   {% if messages %}
+   {% for message in messages %}
+     <div class="response">
+       {{ message }}
+     </div>
+   {% endfor %}
+
+ {% endif %}
 
   {% block content %}
    {% endblock %}
