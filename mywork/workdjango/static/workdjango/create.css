@@ -62,7 +62,7 @@
     text-transform: uppercase;
     outline: 0;
     background: rgb(40, 106, 247);
-    width: 100%;
+    width: 20%;
     padding: 12px;
     color: var(--mainWhite);
     cursor: pointer;
