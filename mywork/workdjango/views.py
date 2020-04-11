@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
+from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib.auth.models import User
 from django.views.generic import (
     ListView,
@@ -17,9 +18,10 @@ class PostListView(ListView):
     ordering = ['-date_posted']
     paginate_by = 5
 
-class PostCreateView(LoginRequiredMixin, CreateView):
+class PostCreateView(LoginRequiredMixin,SuccessMessageMixin, CreateView):
     model = Post
     # success_url = '/'
+    success_message = "Article successfully added"
     fields = ['title', 'content']
 
     def form_valid(self, form):
@@ -29,8 +31,9 @@ class PostCreateView(LoginRequiredMixin, CreateView):
 class PostDetailView(DetailView):
     model = Post     
 
-class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
+class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin,SuccessMessageMixin, UpdateView):
     model = Post
+    success_message = "Article successfully Updated"
     fields = ['title', 'content']
 
     def form_valid(self, form):

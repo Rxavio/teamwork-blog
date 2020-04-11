@@ -4,6 +4,7 @@
   <div class="shared-form">
    <h3>Shared Articles</h3> 
 
+
  {% for post in posts %}       
 <div class="info-card">
 <a href="{% url 'post-detail' post.id %}"><h4>{{ post.title }}</h4></a>
