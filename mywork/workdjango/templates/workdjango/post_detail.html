@@ -5,7 +5,7 @@
    <h3>Shared Articles</h3> 
 
         
-<div class="info-card">
+<!-- <div class="info-card">
 <h4>{{ post.title }}</h4>
 <div>
   {% if object.author == user %}
@@ -19,7 +19,23 @@
 <h5 class="author">Written By <a href="{% url 'user-posts' post.author.username %}">{{ post.author }} </a>
   <i class="date">{{ post.date_posted|timesince }}</i> ago</h5>
 </div>      
+</div> -->
+
+<div class="info-card">
+  <img class="profile"src="{{ post.author.profile.image.url }}"><br>
+  <a href="{% url 'post-detail' post.id %}"><h4>{{ post.title }}</h4></a><br>
+  {% if object.author == user %}
+  <a class="btnupdate"href="{% url 'post-update' object.id %}">Update</a>
+  <a class="btndelete"href="{% url 'post-delete' object.id %}">Delete</a> 
+  {% endif %}
+  <p>{{ post.content }}</p><br><hr>
+  <div class="more">
+  <h5 class="author">Written By <a href="{% url 'user-posts' post.author.username %}">{{ post.author }}</a>
+    <i class="date">{{ post.date_posted|timesince }}</i> ago</h5>
+</div>  
 </div>
+
+
 
 
 </div>

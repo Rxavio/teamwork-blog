@@ -1,0 +1,30 @@
+{% extends "workdjango/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<div class="edit-article-page">
+    <div class="edit-form"> 
+     <h3>Personal Info</h3> 
+        
+<div class="info-card">
+ <img src="{{ user.profile.image.url }}">
+<h3>Username: {{ user.username }}</h3>
+<h3>Email: {{ user.email }}</h3>
+</div>
+
+
+<div class="info-card">
+    <form method="POST" enctype="multipart/form-data">
+  <h4>Edit Your Personal Info</h4>
+         {% csrf_token %}
+         <h3>Profile Info</h3><br>
+         {{ u_form|crispy }}
+         {{ p_form|crispy }}     
+       <button type="submit">Update</button>
+   </form>        
+</div>
+
+
+  
+</div>
+</div>
+{% endblock content %}

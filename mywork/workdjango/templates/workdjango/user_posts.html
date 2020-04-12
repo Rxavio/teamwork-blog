@@ -4,14 +4,16 @@
   <div class="shared-form">
    <h3>All Articles by {{ view.kwargs.username }} ({{ page_obj.paginator.count }})</h3> 
 
- {% for post in posts %}       
+ {% for post in posts %}  
+
 <div class="info-card">
-<a href="{% url 'post-detail' post.id %}"><h4>{{ post.title }}</h4></a>
-<p> {{ post.content }}</p> 
-<div class="more">
-<h5 class="author">Written By <a href="{% url 'user-posts' post.author.username %}">{{ post.author }} </a>
-  <i class="date">{{ post.date_posted|date:"F d, Y" }}</i></h5>
-</div>      
+  <img class="profile"src="{{ post.author.profile.image.url }}"><br>
+  <a href="{% url 'post-detail' post.id %}"><h4>{{ post.title }}</h4></a><br>
+  <p>{{ post.content }}</p><br><hr>
+  <div class="more">
+  <h5 class="author">Written By <a href="{% url 'user-posts' post.author.username %}">{{ post.author }}</a>
+    <i class="date">{{ post.date_posted|timesince }}</i> ago</h5>
+</div>  
 </div>
 
 {% endfor %}

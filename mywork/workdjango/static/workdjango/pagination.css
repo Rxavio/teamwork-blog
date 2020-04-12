@@ -1,0 +1,156 @@
+:root {
+    --primaryColor: rgb(40, 106, 247);
+    --mainWhite: #ffffff;
+    --mainGrey: #ececec;
+    --mainBlack: #000000;
+    --color-primary: #263238;
+    --color-secondary: darkgrey;
+    --mainSpacing: 0.1rem;
+    --mainTransition: all .5s ease;
+    }
+  
+  .edit-article-page{
+    background: #ffffff;
+    width: 60%;
+    height:auto;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    
+  }
+  .edit-form{
+    position: relative;
+    z-index: 1;
+    background: rgb(252, 250, 250);
+    width: 60%;
+    margin: 0 auto 100px;
+    text-align: center;
+    box-sizing: border-box;	
+    border: 1px solid #e1e1e1;
+    border-radius: 10px;
+  }
+  .info-card  {
+    background: var(--mainWhite);
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+    border: 1px solid #e1e1e1;
+    outline: 0; 
+    padding: 25px;
+  }
+  .info-card img{
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    border: 1px solid #e1e1e1;
+  }
+  .info-card h4 {
+    color: var(--primaryColor);
+    letter-spacing: var(--mainSpacing); 
+    }
+  
+    .info-card input{
+    letter-spacing: var(--mainSpacing); 
+    background: var(--mainWhite);
+    width: 100%;
+    margin: 0 0 10px;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #e1e1e1;
+    outline: 0;
+    border-radius: 10px;
+   
+  }
+  
+  .info-card button{
+    text-transform: uppercase;
+    background: var(--primaryColor);
+    width: 20%;
+    padding: 6px;
+    color: var(--mainWhite);
+    letter-spacing: var(--mainSpacing); 
+    cursor: pointer;
+    border-radius: 10px;
+    
+  }
+
+  .response{
+    background: #4BB543;
+    font-size: 20px;  
+    width: 600px;
+    height:auto;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+   }
+   .pagination {
+    display: inline-block;
+    width: 50%;
+    margin-left: 25%;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.pagination a {
+    color: black;
+    float: left;
+    font-weight: bold;
+    padding: 8px 16px;
+    text-decoration: none;
+      
+}
+.pagination a:hover {
+    color: var(--primaryColor); 
+}
+.pagination a:active {
+    color: var(--primaryColor);
+}
+
+.pagination #first {
+    background-color: var(--primaryColor);
+    color: white;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
+
+
+ 
+  
+  @media only screen and (min-width: 300px) and (max-width: 1200px){
+  
+    .edit-article-page
+    {
+      width:100%;
+      margin-bottom: 0px;
+      padding: 10px;
+      margin-top: 5px;
+    }
+    .edit-form{
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 5px; 
+    }
+    .info-card{
+      width:100%
+    }
+  
+    .info-card button{
+    width: 100%; 
+  }
+    
+  
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
