@@ -153,6 +153,18 @@
     padding-right: 10px;
   
   }
+  .shared-form button{
+    text-transform: uppercase;
+    outline: 0;
+    background: rgb(40, 106, 247);
+    width: 20%;
+    padding: 10px;
+    color: var(--mainWhite);
+    cursor: pointer;
+    border-radius: 10px;
+    margin: 0 0 20px;
+  
+  }
   
   
   

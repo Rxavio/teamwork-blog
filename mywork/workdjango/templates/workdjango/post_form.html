@@ -3,7 +3,7 @@
 {% block content %}
 <div class="create-article-page">
     <div class="article-form"> 
-      <form method="POST" autocomplete="on">
+      <form method="POST" autocomplete="off">
         {% csrf_token %}
      <h3>Publish your Article Here</h3><br>
       {{ form|crispy }}
