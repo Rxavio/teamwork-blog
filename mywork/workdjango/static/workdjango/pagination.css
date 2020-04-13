@@ -62,7 +62,7 @@
    
   }
   
-  .info-card button{
+  /* .info-card button{
     text-transform: uppercase;
     background: var(--primaryColor);
     width: 20%;
@@ -72,7 +72,7 @@
     cursor: pointer;
     border-radius: 10px;
     
-  }
+  } */
 
   .response{
     background: #4BB543;

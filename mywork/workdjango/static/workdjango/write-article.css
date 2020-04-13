@@ -58,20 +58,19 @@
   }
   .article-form button{
     text-transform: uppercase;
-    outline: 0;
-    background: rgb(40, 106, 247);
+    border: 2px solid #e1e1e1;
+    background: rgb(10, 181, 211);
     width: 20%;
-    padding: 10px;
+    padding: 8px;
     color: var(--mainWhite);
     cursor: pointer;
+    margin-top: 20px;
     border-radius: 10px;
-    margin: 0 0 20px;
   
   }
   .article-form button:hover,.form.button :active{
-   color: var(--mainWhite);
-  }
-  
+    color: var(--mainBlack);
+  }  
   @media only screen and (min-width: 300px) and (max-width: 600px){
     .create-article-page{
       width:100%;
