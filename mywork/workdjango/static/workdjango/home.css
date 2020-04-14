@@ -26,17 +26,21 @@
     margin: 0 auto 100px;
     padding: 45px;
     text-align: center;
-    box-sizing: border-box;	
+    box-sizing: border-box;
     float:left;
     border-radius: 10px;
-  
-  }
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
   .shared-form img{
     width: 100%;
     height: 300px;
     border-radius: 10px;
   }
-  .shared-form h3{
+
+   .shared-form h3{
    color: var(--mainWhite);
   }
   
