@@ -33,13 +33,13 @@
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
-}
+  }
   .shared-form img{
     width: 100%;
     height: 300px;
     border-radius: 10px;
   }
-
+  
    .shared-form h3{
    color: var(--mainWhite);
   }
@@ -110,7 +110,7 @@
    margin-left: 9%;  
    margin-top: -10px;
   }
-
+  
   .info-card .info-button .btnupdate{
    /* background: grey;*/
     border-bottom: 2px solid var(--primaryColor);
@@ -132,7 +132,7 @@
     padding-right: 10px;
   
   }
- 
+  
   .shared-form button{
     text-transform: uppercase;
     border: 2px solid #e1e1e1;
@@ -148,6 +148,21 @@
   .shared-form button:hover,.form.button :active{
     color: var(--mainBlack);
   } 
+  .shared-form input{
+    background: var(--mainWhite);
+    width: 60%;
+    margin: 0 0 20px;
+    margin-left: -18%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #e1e1e1;
+    outline: 0;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
   
   
   
@@ -190,9 +205,9 @@
   width: 40px;
   height: 40px;
    border-radius: 40%;
-
+  
   */
- .info-card h4 {
+  .info-card h4 {
     font-size: 14px;
     text-transform: uppercase;
     color: var(--primaryColor);
@@ -201,7 +216,7 @@
     margin-left: 1px;
     margin-top: 0px;
   }
-
+  
   .info-card .info-button {
     float: none;
     margin-left: 0;  

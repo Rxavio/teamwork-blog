@@ -1,5 +1,8 @@
 from django.contrib import admin
+from django.contrib.auth.models import Group
 from .models import Post
+
+admin.site.site_header='Admin CMS Panel'
 
 class PostAdmin(admin.ModelAdmin):
     list_display=('title','date_posted','date_updated','author','status')
@@ -9,3 +12,4 @@ class PostAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Post,PostAdmin)
+admin.site.unregister(Group)
