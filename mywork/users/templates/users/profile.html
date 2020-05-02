@@ -1,4 +1,5 @@
 {% extends "workdjango/base.html" %}
+{% load static %}
 {% load crispy_forms_tags %}
 {% block content %}
 <div class="shared-article-page">
@@ -6,7 +7,8 @@
      <h3>Personal Info</h3> 
         
 <div class="info-card">
- <img src="{{ user.profile.image.url }}">
+ <!-- <img src="{{ user.profile.image.url }}"> -->
+ <img src="{% static 'images/agent.jpg' %}">
 <center>
 <h5>Firstname: {{ user.first_name }}</h5>
 <h5>Lastname: {{ user.last_name  }}</h5>
@@ -22,7 +24,7 @@
          {% csrf_token %}
          <h3>Profile Info</h3><br>
          {{ u_form|crispy }}
-         {{ p_form|crispy }}     
+         <!-- {{ p_form|crispy }}      -->
        <button type="submit">Update</button>
    </form>        
 </div>

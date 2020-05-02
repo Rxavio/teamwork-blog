@@ -30,7 +30,10 @@ ALLOWED_HOSTS = []
 
 # Application definition
 
-INSTALLED_APPS = [
+INSTALLED_APPS = [ 
+    # 'workdjango.apps.WorkdjangoConfig',
+    # 'users.apps.UsersConfig',
+    # 'crispy_forms',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -40,6 +43,7 @@ INSTALLED_APPS = [
     'workdjango',
     'users',
     'crispy_forms',
+
     
 ]
 
@@ -91,8 +95,8 @@ DATABASES = {
         'USER': 'postgres',
         'PASSWORD': 'godpro',
         'HOST': 'localhost'
-    }
-}
+     }
+   }
 
 
 # Password validation
@@ -133,12 +137,12 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+MEDIA_ROOT = os.path.join(BASE_DIR, 'images')
+MEDIA_URL = '/images/'
+
 LOGIN_REDIRECT_URL = 'blog-home'
 
 LOGIN_URL = 'login'
-
-MEDIA_ROOT = os.path.join(BASE_DIR, 'images')
-MEDIA_URL = '/images/'
 
 
 

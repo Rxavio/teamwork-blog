@@ -14,7 +14,8 @@
       
   <div class="info-card">
     
-  <img class="profile"src="{{ post.author.profile.image.url }}"><br>
+  <!-- <img class="profile"src="{{ post.author.profile.image.url }}"> -->
+  <img class="profile"src="{% static 'images/agent.jpg' %}"><br>
   <a href="{% url 'post-detail' post.id %}"><h4>{{ post.title }}</h4></a><br>
   <p>{{ post.content }}</p><br><hr>
   
