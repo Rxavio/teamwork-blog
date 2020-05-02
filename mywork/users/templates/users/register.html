@@ -2,15 +2,17 @@
 {% load crispy_forms_tags %}
 {% block content %}
 <div class="create-page">
-
   <div class="create-form">
+    <h3>Create your own account</h3> 
+    <div class="info-card">
     <form method="POST" autocomplete="off">
       {% csrf_token %}
-   <h3>Create your own account</h3> <br>
       {{ form|crispy }}
  <p>Already Registered?<a href="{% url 'login' %}">&nbsp;&nbsp;&nbsp;<u>Login</u></a></p>
+ <br> <br> 
   <button type="submit">Signup</button>
   </form>
+</div>
 </div>
 </div>
 {% endblock content %}

@@ -3,13 +3,18 @@
 {% block content %}
 <div class="create-page">
   <div class="create-form">
+    <h3>Enter your credentials to log in</h3>
+    <div class="info-card">
     <form method="POST" autocomplete="off">
       {% csrf_token %}
-      <h3>Enter your credentials to log in</h3><br>
+    
       {{ form|crispy }}
       <p>Not yet Registered? <a href="{% url 'register' %}"> &nbsp;&nbsp;&nbsp;<u>Sign Up</u></a></p>
+
+      <br> <br> 
   <button type="submit">Login</button>
   </form>
+</div>
 </div>
 </div>
 {% endblock content %}
